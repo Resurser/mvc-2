@@ -1,0 +1,25 @@
+Home page
+  -- slider
+  -- some highlights of products/services
+
+
+Registration page
+-- allow users to register
+-- collect
+- first name
+-last name
+- email
+-password
+
+
+Login page
+-- allow users to log in with email/password
+
+About page
+-- some info about company
+-- display information from the database
+
+Testimonials page
+-- display customer testimonials
+-- allow logged in users to pose testimonials
+-- testimonials consists of title & text

@@ -1,0 +1,5 @@
+# MOD-REWRITE IF FILES DON'T EXISTS
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$0 [L]

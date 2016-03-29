@@ -1,0 +1,11 @@
+$ cat ~/.gitconfig
+[user]
+    name = vladzti
+    email = vlad@z-ti.com
+[core]
+    editor = editor
+    pager = most
+[color]
+    ui = auto
+[merge]
+    conflictstyle = diff3

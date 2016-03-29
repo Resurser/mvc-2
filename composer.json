@@ -1,0 +1,23 @@
+{
+    "name": "trusty-64/develop",
+    "authors": [
+        {
+            "name": "manea vlad",
+            "email": "vlad@z-ti.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.1",
+        "vlucas/phpdotenv": "~1.1",
+        "illuminate/database": "5.1.*",
+        "altorouter/altorouter": "1.1.0",
+        "respect/validation": "^1.0",
+        "twig/twig": "~1.0",
+        "duncan3dc/blade": "3.0.*"
+
+    },
+    "autoload": {
+        "psr-4": { "Acme\\": "src/"}
+    }
+
+}

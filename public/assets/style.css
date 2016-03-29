@@ -1,0 +1,23 @@
+
+.empty-well {
+    background: transparent;
+}
+.bigger-icon {
+    font-size: 48px;
+}
+.footer-background {
+    background-color: black;
+    width:100%;
+    margin-top:50px;
+    color: white;
+}
+.error {
+    color: #FF0000;
+}
+.padding-left-8px {
+    padding-left: 8px;
+}
+.margin-left-5px {
+    margin-left: 5px;
+
+}
