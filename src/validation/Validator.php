@@ -10,6 +10,8 @@ class Validator
         $errors = [];
 
         foreach ($validation_data as $name => $value) {
+
+            // getting array ['first_name' => 'min:3', 'last_name' => 'min:3']
             if (isset($_REQUEST[$name])) {
                 $rules = explode("|", $value);
                 foreach ($rules as $rule) {
@@ -33,48 +35,11 @@ class Validator
                         }
                         break;
                     default:
-                        // do nothing
+                        $errors[] = "No value found!";
                 }
                 }
-            } else {
-                $errors[] = "No value found!";
             }
         }
-
-
-//
-//        if( Validator::stringType()->length(3, null)->validate($_REQUEST['first_name']) == false ){
-//            $errors[] = "First name must have minimum 3 charachter!";
-//        }
-//
-//        if( Validator::stringType()->length(3, null)->validate($_REQUEST['first_name']) == false ){
-//            $errors[] = "Last name must have minimum 3 charachter!";
-//        }
-//
-//        if( Validator::email()->validate($_REQUEST['email']) == false){
-//            $errors[] = "Must be a valid email adress";
-//        }
-//
-//        if( $_REQUEST['verify_email'] != $_REQUEST['email'] ){
-//            $errors[] = "The re-type password don't match";
-//        }
-//
-//        if( Validator::stringType()->length(5, null)->validate($_REQUEST['password']) == false ){
-//            $errors[] = "Password must have minimum 5 charachter!";
-//        }
-//
-//        if( $_REQUEST['password'] != $_REQUEST['verify_password'] ){
-//            $errors[] = "The re-type password not same with password";
-//        }
-//
-//        if(empty($errors)){
-//            echo "Succesfully!";
-//        }
-//
-//        print_r($errors);
-//        exit();
-
-
         return $errors;
     }
 }
