@@ -13,7 +13,8 @@
         "altorouter/altorouter": "1.1.0",
         "respect/validation": "^1.0",
         "twig/twig": "~1.0",
-        "duncan3dc/blade": "3.0.*"
+        "duncan3dc/blade": "3.0.*",
+        "robmorgan/phinx": "^0.5.3"
 
     },
     "autoload": {

@@ -14,6 +14,7 @@ Registration page
 
 Login page
 -- allow users to log in with email/password
+-- display the page from DB
 
 About page
 -- some info about company
