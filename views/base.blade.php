@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title> @yield('browsertitle') </title>
+    <title> @yield('browser_title') </title>
     <link rel="stylesheet" href="/assets/style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -27,16 +27,29 @@
 </head>
 <body>
 
-    @include('topnav')
-    @yield('outsidecontainer')
-   <div class="container">
+@include('topnav')
+@yield('outsidecontainer')
+<div class="container">
+       <br><br><br><br>
     <div class="row">
        @include('errormessage')
     </div>
-   </div>
 
-   @yield('content')
-   <div class="row footer-background">
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            @yield('content')
+        </div>
+        </div>
+    </div>
+
+    <div class="col-lg-2">
+    </div>
+
+<footer class="footer">
+    <div class="row footer-background">
        <div class="col-md-3 margin-left-5px">
            <div class="padding-left-8px">
            <h4>Contact Us</h4>
@@ -52,14 +65,33 @@
        <div class="col-md-3">
             <img src="/assets/map-small.png" class="pull-right" >
        </div>
-   </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.4/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.4/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+
+
+
+
+@if((Acme\Auth\LoggedIn::user()) && (Acme\Auth\LoggedIn::user()->access_level == 2))
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.4/ckeditor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+    @endif
    @yield('bottomjs')
+</footer>
+
+</div>
 
 </body>
 </html>
